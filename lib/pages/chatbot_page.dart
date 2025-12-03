@@ -23,13 +23,8 @@ class _ChatbotPageState extends State<ChatbotPage> {
   final List<_Message> _messages = [];
   bool _isLoading = false;
 
-  // List of models to try in order
-  final List<String> _modelNames = [
-    'gemini-1.5-flash',
-    'gemini-1.5-flash-latest',
-    'gemini-pro',
-    'gemini-1.0-pro',
-  ];
+  // Simple working models for v1beta API (free tier)
+  final List<String> _modelNames = ['gemini-2.5-flash', 'gemini-2.0-flash'];
 
   Future<void> _sendMessage() async {
     final text = _controller.text.trim();
